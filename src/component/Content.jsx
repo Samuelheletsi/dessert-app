@@ -13,7 +13,6 @@ const Content = () => {
     setIsModalOpen(!isModalOpen);
   };
 
-  // Close modal on click outside
   const handleClickOutside = (event) => {
     if (event.target.classList.contains('modal')) {
       setIsModalOpen(false);
@@ -27,7 +26,6 @@ const Content = () => {
       window.removeEventListener('click', handleClickOutside);
     }
 
-    // Cleanup the event listener
     return () => {
       window.removeEventListener('click', handleClickOutside);
     };

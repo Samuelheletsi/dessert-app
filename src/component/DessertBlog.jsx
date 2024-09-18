@@ -11,7 +11,7 @@ class DessertBlog extends Component {
   }
 
   componentDidMount() {
-    fetch('/desserts.json') // Adjust the path based on your project structure
+    fetch('/desserts.json') // Make sure the path to your JSON file is correct
       .then(response => response.json())
       .then(data => {
         this.setState({ desserts: data });

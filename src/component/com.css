@@ -1,7 +1,7 @@
 :root {
-    --dp--font: #ac9f99;
-    --lt--font: #564d4b;
-    --price--font: #ba6657;
+    --dp--font: hsl(20, 10%, 64%);
+    --lt--font: hsl(11, 7%, 32%);
+    --price--font: hsl(9, 42%, 54%);
 }
 
 img {
@@ -482,14 +482,18 @@ img {
 
 
 
+/* For screens with a maximum width of 640px (two columns) */
 @media screen and (max-width: 640px) {
+    .dessert-blog {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for blog items */
+        gap: 1rem;
+        
+        
+    }
+
     .content {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-
-    .dessert-blog {
-        grid-template-columns: 1fr;
     }
 
     .blog {
@@ -524,13 +528,14 @@ img {
         width: 80vw;
         border-radius: 10px;
     }
+
     .blog .para {
         padding-top: 8%;
         padding-left: 10%;
     }
+
     .modal-body {
-        padding:30px;
-        /* display: none; */
+        padding: 30px;
         position: fixed;
         background: white;
         padding: 1rem;
@@ -538,20 +543,20 @@ img {
         top: 10px;
         bottom: 1rem;
         left: 20px;
-       
         width: 450px;
-        
     }
 }
 
+
 @media screen and (max-width: 480px) {
+    .dessert-blog {
+        grid-template-columns: 1fr; 
+        gap: 1rem;
+    }
+
     .content {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-
-    .dessert-blog {
-        grid-template-columns: 1fr;
     }
 
     .blog {
@@ -570,6 +575,7 @@ img {
         left: 20%;
         top: 63%;
     }
+
     .blog .added-to-cart {
         width: 60%;
         height: 50px;
@@ -580,9 +586,9 @@ img {
     .blog button p {
         font-size: 14px;
     }
+
     .modal-body {
-        padding:30px;
-        /* display: none; */
+        padding: 30px;
         position: fixed;
         background: white;
         padding: 1rem;
@@ -590,26 +596,26 @@ img {
         top: 70px;
         bottom: 1rem;
         left: 5px;
-        right: 20%;
         width: 92vw;
         border-radius: 20px;
-        
-        
     }
-    .modal{
+
+    .modal {
         width: 92vw;
     }
-    .item-boxm{
-       width:290px;
-       height: 308px;
-       margin-left: auto;
-       margin-right: auto;
-        
+
+    .item-boxm {
+        width: 290px;
+        height: 308px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .model-item{
+
+    .model-item {
         width: 40vw;
     }
-    .final-sub{
+
+    .final-sub {
         width: 60vw;
         height: 30px;
         border-radius: 20px;
@@ -617,3 +623,4 @@ img {
         border-color: red;
     }
 }
+
